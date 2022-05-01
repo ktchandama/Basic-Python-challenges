@@ -32,3 +32,24 @@ def scalar_function(x, y):
         f = x/y
     return f
     raise NotImplementedError
+
+    
+    
+#scalar_function can only handle scalar input, we could use the function np.vectorize() turn it into a vectorized function. 
+#Note that the input argument of np.vectorize() should be a scalar function, and the output of np.vectorize() is a new function that can handle vector input.
+#Let's write a vector function vector_function, which will apply the operation  defined above element-wisely with input vectors with same dimension x and y.
+
+def vector_function(x, y):
+    """
+    Make sure vector_function can deal with vector input x,y 
+    """
+    #Your code here
+    
+    vector_function = np.vectorize(scalar_function)
+    return vector_function(x,y)
+    
+    raise NotImplementedError
+    
+    
+    
+ 
